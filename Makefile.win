@@ -1,0 +1,33 @@
+CC = x86_64-w64-mingw32-gcc
+CFLAGS = -Wall -Wextra -O3 -I. -Iglfw_win/glfw-3.3.10.bin.WIN64/include -Izlib-1.3.1
+LDFLAGS = -Lglfw_win/glfw-3.3.10.bin.WIN64/lib-mingw-w64 -Lzlib-1.3.1
+LIBS = -lglfw3 -lopengl32 -lglu32 zlib-1.3.1/libz.a -lgdi32 -lwinmm -mwindows
+
+SRC = vec3.c \
+      aabb.c \
+      tesselator.c \
+      textures.c \
+      tile.c \
+      level.c \
+      frustum.c \
+      chunk.c \
+      level_renderer.c \
+      entity.c \
+      player.c \
+      character.c \
+      timer.c \
+      rubydung.c
+
+OBJ = $(SRC:.c=.o)
+TARGET = rubydung.exe
+
+all: $(TARGET)
+
+$(TARGET): $(OBJ)
+	$(CC) $(OBJ) -o $(TARGET) $(LDFLAGS) $(LIBS)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	rm -f $(OBJ) $(TARGET)
