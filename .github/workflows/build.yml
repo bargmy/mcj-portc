@@ -26,6 +26,7 @@ jobs:
 
       - name: Setup Android SDK/NDK
         uses: android-actions/setup-android@v3
+        id: setup_android
 
       - name: Install NDK and Build Tools
         run: |
@@ -54,13 +55,13 @@ jobs:
       - name: Build Android APK
         run: |
           cd android
-          echo "ndk.dir=${ANDROID_SDK_ROOT}/ndk/26.1.10909125" > local.properties
-          echo "sdk.dir=${ANDROID_SDK_ROOT}" >> local.properties
+          echo "ndk.dir=${{ steps.setup_android.outputs.sdk-path }}/ndk/26.1.10909125" > local.properties
+          echo "sdk.dir=${{ steps.setup_android.outputs.sdk-path }}" >> local.properties
           chmod +x gradlew || true
           # Use the installed gradle since gradlew might not be in the repo yet
           gradle assembleRelease || ./gradlew assembleRelease
         env:
-          ANDROID_HOME: ${{ steps.setup-android.outputs.sdk-path }}
+          ANDROID_HOME: ${{ steps.setup_android.outputs.sdk-path }}
 
       - name: Sign Android APK
         uses: r0adkll/sign-android-release@v1
@@ -71,6 +72,9 @@ jobs:
           alias: ${{ secrets.KEY_ALIAS }}
           keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
           keyPassword: ${{ secrets.KEY_PASSWORD }}
+        env:
+          BUILD_TOOLS_VERSION: "34.0.0"
+          ANDROID_HOME: ${{ steps.setup_android.outputs.sdk-path }}
 
       - name: Get current date
         id: date
