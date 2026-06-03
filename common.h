@@ -14,6 +14,13 @@
 #ifdef ANDROID_PORT
 #include <GLES/gl.h>
 #include <GLES/glext.h>
+
+// Shims for missing GL 1.1 functions in GLES 1.1
+#define glColor3f(r, g, b) glColor4f(r, g, b, 1.0f)
+#define glOrtho glOrthof
+#define glFrustum glFrustumf
+#define glClearDepth glClearDepthf
+
 #define gluPerspective(fovy, aspect, zNear, zFar) \
     { \
         float f = 1.0f / tanf(fovy * (M_PI / 360.0f)); \

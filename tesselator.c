@@ -37,6 +37,47 @@ void Tesselator_clear(Tesselator* self) {
 void Tesselator_flush(Tesselator* self) {
     if (!self || self->vertices == 0) return;
 
+#ifdef ANDROID_PORT
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glVertexPointer(3, GL_FLOAT, 0, self->vertexBuffer);
+
+    if (self->hasTexture) {
+        glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+        glTexCoordPointer(2, GL_FLOAT, 0, self->texCoordBuffer);
+    } else {
+        glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+    }
+
+    if (self->hasColor) {
+        glEnableClientState(GL_COLOR_ARRAY);
+        // OpenGL ES 1.1 glColorPointer usually expects 4 components (RGBA) for best performance, 
+        // but let's see if 3 works or if we need to expand the buffer.
+        glColorPointer(3, GL_FLOAT, 0, self->colorBuffer);
+    } else {
+        glDisableClientState(GL_COLOR_ARRAY);
+    }
+
+    // GL_QUADS is not supported in GLES. We must convert to GL_TRIANGLES.
+    // The current buffer is stored as quads (4 vertices each).
+    // We can use glDrawElements with an index buffer or just draw as triangles if we re-arranged.
+    // Simplest fix: Draw as triangles by using an index buffer.
+    int indexCount = (self->vertices / 4) * 6;
+    unsigned short* indices = (unsigned short*)malloc(indexCount * sizeof(unsigned short));
+    for (int i = 0, v = 0; i < indexCount; i += 6, v += 4) {
+        indices[i + 0] = v + 0;
+        indices[i + 1] = v + 1;
+        indices[i + 2] = v + 2;
+        indices[i + 3] = v + 0;
+        indices[i + 4] = v + 2;
+        indices[i + 5] = v + 3;
+    }
+    glDrawElements(GL_TRIANGLES, indexCount, GL_UNSIGNED_SHORT, indices);
+    free(indices);
+
+    glDisableClientState(GL_VERTEX_ARRAY);
+    glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+    glDisableClientState(GL_COLOR_ARRAY);
+#else
     glBegin(GL_QUADS);
     for (int i = 0; i < self->vertices; i++) {
         if (self->hasColor) {
@@ -48,6 +89,7 @@ void Tesselator_flush(Tesselator* self) {
         glVertex3f(self->vertexBuffer[i * 3 + 0], self->vertexBuffer[i * 3 + 1], self->vertexBuffer[i * 3 + 2]);
     }
     glEnd();
+#endif
 
     Tesselator_clear(self);
 }

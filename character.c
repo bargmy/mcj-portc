@@ -38,14 +38,23 @@ ModelPolygon ModelPolygon_createTex(Vertex* vertices, int u0, int v0, int u1, in
     return poly;
 }
 
+#include "tesselator.h"
+
 void ModelPolygon_render(ModelPolygon* self) {
     if (!self) return;
-    glColor3f(1.0f, 1.0f, 1.0f);
+    
+    // Static tesselator instance for model rendering
+    static Tesselator* t = NULL;
+    if (!t) t = Tesselator_create();
+
+    Tesselator_init(t);
+    Tesselator_color(t, 1.0f, 1.0f, 1.0f);
     for (int i = 3; i >= 0; i--) {
         Vertex v = self->vertices[i];
-        glTexCoord2f(v.u / 64.0f, v.v / 32.0f);
-        glVertex3f(v.pos.x, v.pos.y, v.pos.z);
+        Tesselator_tex(t, v.u / 64.0f, v.v / 32.0f);
+        Tesselator_vertex(t, v.pos.x, v.pos.y, v.pos.z);
     }
+    Tesselator_flush(t);
 }
 
 // Cube
@@ -128,11 +137,9 @@ void Cube_render(Cube* self) {
     glRotatef(self->zRot * c, 0.0f, 0.0f, 1.0f);
     glRotatef(self->yRot * c, 0.0f, 1.0f, 0.0f);
     glRotatef(self->xRot * c, 1.0f, 0.0f, 0.0f);
-    glBegin(GL_QUADS);
     for (int i = 0; i < 6; i++) {
         ModelPolygon_render(&self->polygons[i]);
     }
-    glEnd();
     glPopMatrix();
 }
 
