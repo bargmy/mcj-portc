@@ -15,6 +15,9 @@ SRC = vec3.c \
       player.c \
       character.c \
       timer.c \
+      input.c \
+      font.c \
+      mobile_ui.c \
       rubydung.c
 
 OBJ = $(SRC:.c=.o)

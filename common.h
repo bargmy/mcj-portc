@@ -11,9 +11,25 @@
 #include <windows.h>
 #endif
 
+#ifdef ANDROID_PORT
+#include <GLES/gl.h>
+#include <GLES/glext.h>
+#define gluPerspective(fovy, aspect, zNear, zFar) \
+    { \
+        float f = 1.0f / tanf(fovy * (M_PI / 360.0f)); \
+        float m[16] = { \
+            f / aspect, 0, 0, 0, \
+            0, f, 0, 0, \
+            0, 0, (zFar + zNear) / (zNear - zFar), -1, \
+            0, 0, (2.0f * zFar * zNear) / (zNear - zFar), 0 \
+        }; \
+        glMultMatrixf(m); \
+    }
+#else
 #include <GLFW/glfw3.h>
 #include <GL/gl.h>
 #include <GL/glu.h>
+#endif
 
 #ifndef M_PI
 #define M_PI 3.14159265358979323846
