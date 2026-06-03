@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace 'com.bargmy.rubydung'
+    compileSdk 34
+    ndkVersion "26.1.10909125"
+
+    defaultConfig {
+        applicationId "com.bargmy.rubydung"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        externalNativeBuild {
+            cmake {
+                arguments "-DANDROID_PORT=ON"
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            
+            signingConfig signingConfigs.debug // Placeholder, will be updated by user or CI
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+            version "3.22.1"
+        }
+    }
+}

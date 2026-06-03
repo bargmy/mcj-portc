@@ -1,0 +1,8 @@
+/build-android-local/
+/android/local.properties
+/android/.gradle/
+/android/app/build/
+/*.exe
+/*.apk
+/*.keystore
+/*.base64

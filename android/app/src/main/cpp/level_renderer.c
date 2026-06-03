@@ -77,7 +77,6 @@ void LevelRenderer_destroy(LevelRenderer* self) {
 }
 
 void LevelRenderer_render(LevelRenderer* self, Player* player, int layer) {
-    (void)player;
     if (!self) return;
     Chunk_rebuiltThisFrame = 0;
     Frustum* frustum = Frustum_getFrustum();
@@ -94,48 +93,7 @@ void LevelRenderer_pick(LevelRenderer* self, Player* player) {
     (void)self; (void)player;
 #else
     if (!self || !player) return;
-    float r = 3.0f;
-    AABB box = AABB_grow(player->base.bb, r, r, r);
-    int x0 = (int)box.x0;
-    int x1 = (int)(box.x1 + 1.0f);
-    int y0 = (int)box.y0;
-    int y1 = (int)(box.y1 + 1.0f);
-    int z0 = (int)box.z0;
-    int z1 = (int)(box.z1 + 1.0f);
-
-    glInitNames();
-
-    for (int x = x0; x < x1; x++) {
-        glPushName(x);
-        for (int y = y0; y < y1; y++) {
-            glPushName(y);
-            for (int z = z0; z < z1; z++) {
-                glPushName(z);
-                if (Level_isSolidTile(self->level, x, y, z)) {
-                    glPushName(0);
-                    for (int i = 0; i < 6; i++) {
-                        int nx = x, ny = y, nz = z;
-                        if (i == 0) ny--;
-                        if (i == 1) ny++;
-                        if (i == 2) nz--;
-                        if (i == 3) nz++;
-                        if (i == 4) nx--;
-                        if (i == 5) nx++;
-
-                        if (!Level_isSolidTile(self->level, nx, ny, nz)) {
-                            glPushName(i);
-                            Tesselator_init(self->t);
-                            Tile_renderFace(&Tile_rock, self->t, x, y, z, i);
-                            Tesselator_flush(self->t);
-                            glPopName();
-                        }
-                    }
-                    glPopName();
-                }
-                glPopName();
-            }
-            glPopName();
-        }
+...
         glPopName();
     }
 #endif
