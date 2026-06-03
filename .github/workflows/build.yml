@@ -73,7 +73,7 @@ jobs:
           keyPassword: ${{ secrets.KEY_PASSWORD }}
         env:
           BUILD_TOOLS_VERSION: "34.0.0"
-          ANDROID_HOME: ${{ steps.setup_android.outputs.sdk-path }}
+          ANDROID_HOME: ${{ env.ANDROID_SDK_ROOT }}
 
       - name: Get current date
         id: date
