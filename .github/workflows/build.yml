@@ -54,14 +54,13 @@ jobs:
 
       - name: Build Android APK
         run: |
+          mkdir -p android/app/src/main/assets
+          cp *.png android/app/src/main/assets/
           cd android
-          echo "ndk.dir=${{ steps.setup_android.outputs.sdk-path }}/ndk/26.1.10909125" > local.properties
-          echo "sdk.dir=${{ steps.setup_android.outputs.sdk-path }}" >> local.properties
+          echo "ndk.dir=${ANDROID_SDK_ROOT}/ndk/26.1.10909125" > local.properties
+          echo "sdk.dir=${ANDROID_SDK_ROOT}" >> local.properties
           chmod +x gradlew || true
-          # Use the installed gradle since gradlew might not be in the repo yet
           gradle assembleRelease || ./gradlew assembleRelease
-        env:
-          ANDROID_HOME: ${{ steps.setup_android.outputs.sdk-path }}
 
       - name: Sign Android APK
         uses: r0adkll/sign-android-release@v1
