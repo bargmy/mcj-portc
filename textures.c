@@ -22,6 +22,12 @@ void Textures_setAssetManager(AAssetManager* mgr) {
 }
 #endif
 
+#ifdef ANDROID_PORT
+#include <android/log.h>
+#define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "RubyDung", __VA_ARGS__))
+#define LOGE(...) ((void)__android_log_print(ANDROID_LOG_ERROR, "RubyDung", __VA_ARGS__))
+#endif
+
 int Textures_loadTexture(const char* resourceName, int mode) {
     // Check if texture is already loaded
     for (int i = 0; i < textureCacheCount; i++) {
@@ -36,6 +42,10 @@ int Textures_loadTexture(const char* resourceName, int mode) {
         filename++;
     }
 
+#ifdef ANDROID_PORT
+    LOGI("Loading texture: %s", filename);
+#endif
+
     int width, height, channels;
     unsigned char* pixels = NULL;
 
@@ -49,7 +59,16 @@ int Textures_loadTexture(const char* resourceName, int mode) {
             AAsset_close(asset);
             pixels = stbi_load_from_memory(buffer, (int)size, &width, &height, &channels, 4);
             free(buffer);
+            if (pixels) {
+                LOGI("Loaded %s from assets (%dx%d)", filename, width, height);
+            } else {
+                LOGE("Failed to parse %s from memory", filename);
+            }
+        } else {
+            LOGE("Failed to open %s from asset manager", filename);
         }
+    } else {
+        LOGE("Asset manager not set!");
     }
 #endif
 

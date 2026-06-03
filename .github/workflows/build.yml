@@ -75,15 +75,15 @@ jobs:
           BUILD_TOOLS_VERSION: "34.0.0"
           ANDROID_HOME: ${{ env.ANDROID_SDK_ROOT }}
 
-      - name: Get current date
-        id: date
-        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+      - name: Get current date and time
+        id: datetime
+        run: echo "dt=$(date +'%Y-%m-%d-%H%M%S')" >> $GITHUB_OUTPUT
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: latest-${{ steps.date.outputs.date }}
-          name: Release ${{ steps.date.outputs.date }}
+          tag_name: latest-${{ steps.datetime.outputs.dt }}
+          name: Release ${{ steps.datetime.outputs.dt }}
           body: |
             Automated build for RubyDung C Port.
             - Windows x64 (Cross-compiled on Linux)

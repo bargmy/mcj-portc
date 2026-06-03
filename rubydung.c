@@ -397,6 +397,7 @@ static void engine_term_display(struct Engine* engine) {
 }
 
 static int engine_init_display(struct Engine* engine) {
+    LOGI("Initializing EGL Display...");
     const EGLint attribs[] = {
         EGL_SURFACE_TYPE, EGL_WINDOW_BIT,
         EGL_BLUE_SIZE, 8,
@@ -412,17 +413,39 @@ static int engine_init_display(struct Engine* engine) {
     EGLContext context;
 
     EGLDisplay display = eglGetDisplay(EGL_DEFAULT_DISPLAY);
-    eglInitialize(display, 0, 0);
-    eglChooseConfig(display, attribs, &config, 1, &numConfigs);
-    eglGetConfigAttrib(display, config, EGL_NATIVE_VISUAL_ID, &format);
+    if (display == EGL_NO_DISPLAY) {
+        LOGE("eglGetDisplay failed");
+        return -1;
+    }
 
+    if (!eglInitialize(display, 0, 0)) {
+        LOGE("eglInitialize failed");
+        return -1;
+    }
+
+    if (!eglChooseConfig(display, attribs, &config, 1, &numConfigs) || numConfigs <= 0) {
+        LOGE("eglChooseConfig failed or no configs found");
+        return -1;
+    }
+
+    eglGetConfigAttrib(display, config, EGL_NATIVE_VISUAL_ID, &format);
     ANativeWindow_setBuffersGeometry(engine->app->window, 0, 0, format);
 
     surface = eglCreateWindowSurface(display, config, engine->app->window, NULL);
+    if (surface == EGL_NO_SURFACE) {
+        LOGE("eglCreateWindowSurface failed");
+        return -1;
+    }
+
+    // Attempt to create GLES 1.1 context (explicitly or via default)
     context = eglCreateContext(display, config, NULL, NULL);
+    if (context == EGL_NO_CONTEXT) {
+        LOGE("eglCreateContext failed");
+        return -1;
+    }
 
     if (eglMakeCurrent(display, surface, surface, context) == EGL_FALSE) {
-        LOGE("Unable to eglMakeCurrent");
+        LOGE("eglMakeCurrent failed");
         return -1;
     }
 
@@ -437,6 +460,11 @@ static int engine_init_display(struct Engine* engine) {
     
     width = w;
     height = h;
+
+    LOGI("EGL Initialized. Size: %dx%d", w, h);
+    LOGI("GL_VENDOR: %s", glGetString(GL_VENDOR));
+    LOGI("GL_RENDERER: %s", glGetString(GL_RENDERER));
+    LOGI("GL_VERSION: %s", glGetString(GL_VERSION));
 
     Textures_setAssetManager(engine->app->activity->assetManager);
     initGame(NULL);
