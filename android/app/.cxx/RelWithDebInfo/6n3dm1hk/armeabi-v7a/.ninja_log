@@ -1,0 +1,21 @@
+# ninja log v5
+3	121	1780449455840447246	CMakeFiles/rubydung-android.dir/vec3.c.o	b6c7cb9c45448b6e
+4	200	1780449455914447248	CMakeFiles/rubydung-android.dir/aabb.c.o	efb50911764271f4
+2	250	1780449455965447248	CMakeFiles/rubydung-android.dir/tesselator.c.o	5abbd9b57f99f04c
+250	573	1780449456283447254	CMakeFiles/rubydung-android.dir/tile.c.o	185784aa3cda1a15
+121	631	1780449456327447255	CMakeFiles/rubydung-android.dir/level_renderer.c.o	d98139c8f8721e9b
+573	942	1780449456664447261	CMakeFiles/rubydung-android.dir/level.c.o	9bd5a3f96116b51b
+631	988	1780449456712447262	CMakeFiles/rubydung-android.dir/frustum.c.o	d26ef520a7796023
+942	1051	1780449456776447263	CMakeFiles/rubydung-android.dir/chunk.c.o	853619a214aa59cd
+1051	1181	1780449456903447265	CMakeFiles/rubydung-android.dir/player.c.o	5d1d1e6cacc667cf
+990	1202	1780449456917447266	CMakeFiles/rubydung-android.dir/entity.c.o	5df7fc8f2a844ec5
+1202	1275	1780449457001447267	CMakeFiles/rubydung-android.dir/timer.c.o	9ee40668d1995607
+1275	1345	1780449457069447268	CMakeFiles/rubydung-android.dir/input.c.o	fb1bcf7734026aed
+1345	1455	1780449457177447270	CMakeFiles/rubydung-android.dir/font.c.o	19227936999c98f4
+1181	1517	1780449457234447271	CMakeFiles/rubydung-android.dir/character.c.o	317b32529e3e1e13
+1455	1565	1780449457291447272	CMakeFiles/rubydung-android.dir/mobile_ui.c.o	ab9863612131bc2c
+1566	1735	1780449457460447275	CMakeFiles/native_app_glue.dir/workspaces/NoveoKotlin/mc/android-ndk-r26b/sources/android/native_app_glue/android_native_app_glue.c.o	29c8f500ab546fb6
+1736	1771	1780449457476447276	libnative_app_glue.a	c5d12f6dd95fc3e7
+1517	1809	1780449457535447277	CMakeFiles/rubydung-android.dir/rubydung.c.o	b5d6a501abd2dbc9
+200	4131	1780449459848447318	CMakeFiles/rubydung-android.dir/textures.c.o	a0e19d2cd855a5f9
+4131	4181	1780449459904447319	/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/build/intermediates/cxx/RelWithDebInfo/6n3dm1hk/obj/armeabi-v7a/librubydung-android.so	f9bee87620a73376

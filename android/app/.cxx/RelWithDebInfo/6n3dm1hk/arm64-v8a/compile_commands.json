@@ -1,0 +1,92 @@
+[
+{
+  "directory": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/.cxx/RelWithDebInfo/6n3dm1hk/arm64-v8a",
+  "command": "/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DANDROID_PORT -Drubydung_android_EXPORTS -I/workspaces/NoveoKotlin/mc/android-ndk-r26b/sources/android/native_app_glue -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -g -DNDEBUG -fPIC -std=gnu99 -o CMakeFiles/rubydung-android.dir/vec3.c.o -c /workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/vec3.c",
+  "file": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/vec3.c"
+},
+{
+  "directory": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/.cxx/RelWithDebInfo/6n3dm1hk/arm64-v8a",
+  "command": "/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DANDROID_PORT -Drubydung_android_EXPORTS -I/workspaces/NoveoKotlin/mc/android-ndk-r26b/sources/android/native_app_glue -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -g -DNDEBUG -fPIC -std=gnu99 -o CMakeFiles/rubydung-android.dir/aabb.c.o -c /workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/aabb.c",
+  "file": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/aabb.c"
+},
+{
+  "directory": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/.cxx/RelWithDebInfo/6n3dm1hk/arm64-v8a",
+  "command": "/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DANDROID_PORT -Drubydung_android_EXPORTS -I/workspaces/NoveoKotlin/mc/android-ndk-r26b/sources/android/native_app_glue -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -g -DNDEBUG -fPIC -std=gnu99 -o CMakeFiles/rubydung-android.dir/tesselator.c.o -c /workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/tesselator.c",
+  "file": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/tesselator.c"
+},
+{
+  "directory": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/.cxx/RelWithDebInfo/6n3dm1hk/arm64-v8a",
+  "command": "/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DANDROID_PORT -Drubydung_android_EXPORTS -I/workspaces/NoveoKotlin/mc/android-ndk-r26b/sources/android/native_app_glue -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -g -DNDEBUG -fPIC -std=gnu99 -o CMakeFiles/rubydung-android.dir/textures.c.o -c /workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/textures.c",
+  "file": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/textures.c"
+},
+{
+  "directory": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/.cxx/RelWithDebInfo/6n3dm1hk/arm64-v8a",
+  "command": "/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DANDROID_PORT -Drubydung_android_EXPORTS -I/workspaces/NoveoKotlin/mc/android-ndk-r26b/sources/android/native_app_glue -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -g -DNDEBUG -fPIC -std=gnu99 -o CMakeFiles/rubydung-android.dir/tile.c.o -c /workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/tile.c",
+  "file": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/tile.c"
+},
+{
+  "directory": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/.cxx/RelWithDebInfo/6n3dm1hk/arm64-v8a",
+  "command": "/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DANDROID_PORT -Drubydung_android_EXPORTS -I/workspaces/NoveoKotlin/mc/android-ndk-r26b/sources/android/native_app_glue -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -g -DNDEBUG -fPIC -std=gnu99 -o CMakeFiles/rubydung-android.dir/level.c.o -c /workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/level.c",
+  "file": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/level.c"
+},
+{
+  "directory": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/.cxx/RelWithDebInfo/6n3dm1hk/arm64-v8a",
+  "command": "/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DANDROID_PORT -Drubydung_android_EXPORTS -I/workspaces/NoveoKotlin/mc/android-ndk-r26b/sources/android/native_app_glue -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -g -DNDEBUG -fPIC -std=gnu99 -o CMakeFiles/rubydung-android.dir/frustum.c.o -c /workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/frustum.c",
+  "file": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/frustum.c"
+},
+{
+  "directory": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/.cxx/RelWithDebInfo/6n3dm1hk/arm64-v8a",
+  "command": "/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DANDROID_PORT -Drubydung_android_EXPORTS -I/workspaces/NoveoKotlin/mc/android-ndk-r26b/sources/android/native_app_glue -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -g -DNDEBUG -fPIC -std=gnu99 -o CMakeFiles/rubydung-android.dir/chunk.c.o -c /workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/chunk.c",
+  "file": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/chunk.c"
+},
+{
+  "directory": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/.cxx/RelWithDebInfo/6n3dm1hk/arm64-v8a",
+  "command": "/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DANDROID_PORT -Drubydung_android_EXPORTS -I/workspaces/NoveoKotlin/mc/android-ndk-r26b/sources/android/native_app_glue -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -g -DNDEBUG -fPIC -std=gnu99 -o CMakeFiles/rubydung-android.dir/level_renderer.c.o -c /workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/level_renderer.c",
+  "file": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/level_renderer.c"
+},
+{
+  "directory": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/.cxx/RelWithDebInfo/6n3dm1hk/arm64-v8a",
+  "command": "/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DANDROID_PORT -Drubydung_android_EXPORTS -I/workspaces/NoveoKotlin/mc/android-ndk-r26b/sources/android/native_app_glue -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -g -DNDEBUG -fPIC -std=gnu99 -o CMakeFiles/rubydung-android.dir/entity.c.o -c /workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/entity.c",
+  "file": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/entity.c"
+},
+{
+  "directory": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/.cxx/RelWithDebInfo/6n3dm1hk/arm64-v8a",
+  "command": "/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DANDROID_PORT -Drubydung_android_EXPORTS -I/workspaces/NoveoKotlin/mc/android-ndk-r26b/sources/android/native_app_glue -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -g -DNDEBUG -fPIC -std=gnu99 -o CMakeFiles/rubydung-android.dir/player.c.o -c /workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/player.c",
+  "file": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/player.c"
+},
+{
+  "directory": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/.cxx/RelWithDebInfo/6n3dm1hk/arm64-v8a",
+  "command": "/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DANDROID_PORT -Drubydung_android_EXPORTS -I/workspaces/NoveoKotlin/mc/android-ndk-r26b/sources/android/native_app_glue -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -g -DNDEBUG -fPIC -std=gnu99 -o CMakeFiles/rubydung-android.dir/character.c.o -c /workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/character.c",
+  "file": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/character.c"
+},
+{
+  "directory": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/.cxx/RelWithDebInfo/6n3dm1hk/arm64-v8a",
+  "command": "/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DANDROID_PORT -Drubydung_android_EXPORTS -I/workspaces/NoveoKotlin/mc/android-ndk-r26b/sources/android/native_app_glue -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -g -DNDEBUG -fPIC -std=gnu99 -o CMakeFiles/rubydung-android.dir/timer.c.o -c /workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/timer.c",
+  "file": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/timer.c"
+},
+{
+  "directory": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/.cxx/RelWithDebInfo/6n3dm1hk/arm64-v8a",
+  "command": "/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DANDROID_PORT -Drubydung_android_EXPORTS -I/workspaces/NoveoKotlin/mc/android-ndk-r26b/sources/android/native_app_glue -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -g -DNDEBUG -fPIC -std=gnu99 -o CMakeFiles/rubydung-android.dir/input.c.o -c /workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/input.c",
+  "file": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/input.c"
+},
+{
+  "directory": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/.cxx/RelWithDebInfo/6n3dm1hk/arm64-v8a",
+  "command": "/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DANDROID_PORT -Drubydung_android_EXPORTS -I/workspaces/NoveoKotlin/mc/android-ndk-r26b/sources/android/native_app_glue -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -g -DNDEBUG -fPIC -std=gnu99 -o CMakeFiles/rubydung-android.dir/font.c.o -c /workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/font.c",
+  "file": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/font.c"
+},
+{
+  "directory": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/.cxx/RelWithDebInfo/6n3dm1hk/arm64-v8a",
+  "command": "/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DANDROID_PORT -Drubydung_android_EXPORTS -I/workspaces/NoveoKotlin/mc/android-ndk-r26b/sources/android/native_app_glue -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -g -DNDEBUG -fPIC -std=gnu99 -o CMakeFiles/rubydung-android.dir/mobile_ui.c.o -c /workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/mobile_ui.c",
+  "file": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/mobile_ui.c"
+},
+{
+  "directory": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/.cxx/RelWithDebInfo/6n3dm1hk/arm64-v8a",
+  "command": "/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DANDROID_PORT -Drubydung_android_EXPORTS -I/workspaces/NoveoKotlin/mc/android-ndk-r26b/sources/android/native_app_glue -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -g -DNDEBUG -fPIC -std=gnu99 -o CMakeFiles/rubydung-android.dir/rubydung.c.o -c /workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/rubydung.c",
+  "file": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/rubydung.c"
+},
+{
+  "directory": "/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/.cxx/RelWithDebInfo/6n3dm1hk/arm64-v8a",
+  "command": "/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/workspaces/NoveoKotlin/mc/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -g -DNDEBUG -fPIC -std=gnu99 -o CMakeFiles/native_app_glue.dir/workspaces/NoveoKotlin/mc/android-ndk-r26b/sources/android/native_app_glue/android_native_app_glue.c.o -c /workspaces/NoveoKotlin/mc/android-ndk-r26b/sources/android/native_app_glue/android_native_app_glue.c",
+  "file": "/workspaces/NoveoKotlin/mc/android-ndk-r26b/sources/android/native_app_glue/android_native_app_glue.c"
+}
+]

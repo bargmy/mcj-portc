@@ -1,0 +1,1 @@
+/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/build/intermediates/cxx/RelWithDebInfo/6n3dm1hk/obj/armeabi-v7a

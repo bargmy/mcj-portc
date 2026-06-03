@@ -1,0 +1,4 @@
+/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/.cxx/RelWithDebInfo/6n3dm1hk/x86/CMakeFiles/rubydung-android.dir
+/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/.cxx/RelWithDebInfo/6n3dm1hk/x86/CMakeFiles/native_app_glue.dir
+/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/.cxx/RelWithDebInfo/6n3dm1hk/x86/CMakeFiles/edit_cache.dir
+/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/.cxx/RelWithDebInfo/6n3dm1hk/x86/CMakeFiles/rebuild_cache.dir

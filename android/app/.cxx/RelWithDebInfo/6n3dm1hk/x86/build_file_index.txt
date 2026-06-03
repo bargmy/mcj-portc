@@ -1,0 +1,1 @@
+/workspaces/NoveoKotlin/mc/rd-android/repo/android/app/src/main/cpp/CMakeLists.txt

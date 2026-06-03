@@ -14,6 +14,14 @@ typedef struct {
 static TextureCacheEntry textureCache[MAX_CACHED_TEXTURES];
 static int textureCacheCount = 0;
 
+#ifdef ANDROID_PORT
+#include <android/asset_manager.h>
+static AAssetManager* assetManager = NULL;
+void Textures_setAssetManager(AAssetManager* mgr) {
+    assetManager = mgr;
+}
+#endif
+
 int Textures_loadTexture(const char* resourceName, int mode) {
     // Check if texture is already loaded
     for (int i = 0; i < textureCacheCount; i++) {
@@ -29,7 +37,26 @@ int Textures_loadTexture(const char* resourceName, int mode) {
     }
 
     int width, height, channels;
-    unsigned char* pixels = stbi_load(filename, &width, &height, &channels, 4);
+    unsigned char* pixels = NULL;
+
+#ifdef ANDROID_PORT
+    if (assetManager) {
+        AAsset* asset = AAssetManager_open(assetManager, filename, AASSET_MODE_BUFFER);
+        if (asset) {
+            size_t size = AAsset_getLength(asset);
+            unsigned char* buffer = (unsigned char*)malloc(size);
+            AAsset_read(asset, buffer, size);
+            AAsset_close(asset);
+            pixels = stbi_load_from_memory(buffer, (int)size, &width, &height, &channels, 4);
+            free(buffer);
+        }
+    }
+#endif
+
+    if (!pixels) {
+        pixels = stbi_load(filename, &width, &height, &channels, 4);
+    }
+
     if (!pixels) {
         fprintf(stderr, "Failed to load texture: %s\n", filename);
         return 0;
